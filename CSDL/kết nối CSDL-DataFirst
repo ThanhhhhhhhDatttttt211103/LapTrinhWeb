@@ -1,0 +1,62 @@
+//Cài tool
+1. Microsoft.EntityFrameworkCore 6.0.21
+2. Microsoft.EntityFrameworkCore.Design 6.0.21
+3. Microsoft.EntityFrameworkCore.SqlServer 6.0.16
+4. Microsoft.EntityFrameworkCore.Tools 6.0.16
+
+//Kết nối csdl
+Scaffold-DbContext "" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/Entities
+//Đăng kí sử dụng 
+
+    "ConnectionStrings": {
+      "NguyenThanhDat": ""
+    },
+
+builder.Services.AddDbContext<NguyenThanhDat_Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("NguyenThanhDat")));
+
+// Lấy 4 hàng hóa có giá lớn nhất
+var result = dbContext.Products
+    .OrderByDescending(p => p.Price)
+    .Take(4)
+    .ToList();
+
+
+// Lấy 4 hàng hóa có giá thấp nhất
+var result = dbContext.Products
+    .OrderBy(p => p.Price)
+    .Take(4)
+    .ToList();
+
+//Anotation
+Số lớn hơn 100:
+[Range(100, double.MaxValue, ErrorMessage = "UnitPrice phải lớn hơn 100.")]
+
+Phải nằm trong khoảng:
+[Range(100, 5000, ErrorMessage = "Giá phải nằm trong khoảng từ 100 đến 5000")]
+
+Phải nhập số:
+[RegularExpression(@"^[1-9]\d*\.?\d*$", ErrorMessage = "UnitPrice phải là số")]
+Phải là số và có 3 kí tự:
+[RegularExpression(@"^(?:[1-9]\d{2,}|\d{4,})(\.\d+)?$", ErrorMessage = "UnitPrice phải là số")]
+
+Phải là email:
+[RegularExpression(".*@gmail\\.com$", ErrorMessage = "Email không hợp lệ!")]
+
+Phải đúng tên file:
+[RegularExpression(@"^.*\.(jpg|png|gif|tiff)$", ErrorMessage = "Tên file phải có đuôi .jpg, .png, .gif, hoặc .tiff")]
+
+Ngày sinh phải lớn hơn 18:
+[Range(typeof(DateTime), "1/1/1963", "12/31/2005")]
+
+[DataType(DataType.DateTime)]
+[Required]
+public DateTime DateOfBorth { get; set; }
+
+Độ dài tối thiểu và tối đa của mật khẩu:
+[StringLength(100, MinimumLength = 8)]
+
+Kiểm tra phải trùng pass
+[Compare(nameof(Password), ErrorMessage = "The password and confirmation password do not match.")]
+
+phải là XX0000
+[RegularExpression("^[A-Z]{2}\\d{4}$", ErrorMessage = "Id không hợp lệ!")]
