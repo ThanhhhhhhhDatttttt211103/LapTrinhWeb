@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NguyenThanhDat_211201056.Models.Entities.Product>
+<div class="content_right">
+	@foreach (var item in Model)
+	{
+		<div class="col-xs-4 product-men">
+			<div class="men-pro-item">
+				<div class="men-thumb-item">
+					<img src="~/ThanhDat/images/@item.Image" alt="">
+				</div>
+				<div class="item-info-product ">
+					<h4>
+						<a href="single.html">@item.Name</a>
+					</h4>
+					<div class="info-product-price">
+						<span class="item_price">$@item.UnitPrice</span>
+					</div>
+					<div class="snipcart-details">
+						<a asp-action="Edit" asp-controller="BaiThi" asp-route-id="@item.Id" class="button">Edit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>

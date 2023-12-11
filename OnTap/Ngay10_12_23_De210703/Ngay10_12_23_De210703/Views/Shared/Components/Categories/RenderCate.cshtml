@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Ngay10_12_23_De210703.Models.Entities.Category>
+
+<div class="col-md-4 products-left">
+	<div class="categories">
+		<h2>NGUYỄN THÀNH ĐẠT</h2>
+		<ul class="cate">
+			@foreach(var item in Model)
+			{
+				<li id="@item.Id"><a><i class="fa fa-arrow-right" aria-hidden="true"></i>@item.Name</a></li>
+			}
+		</ul>
+	</div>
+</div>

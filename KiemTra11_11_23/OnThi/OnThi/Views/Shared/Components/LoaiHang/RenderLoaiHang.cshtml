@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OnThi.Models.Entities.LoaiHang>
+<div class="header">
+	<div class="header_top">
+		<div class="logo">
+			<a asp-action ="Index" asp-controller="BaiThi"><img src="~/ThanhDat/images/logo.png" alt="" /></a>
+		</div>
+		<div class="cart">
+			<p>
+				Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2">
+					0 item(s) - $0.00
+					<ul class="dropdown">
+						<li>you have no items in your Shopping cart</li>
+					</ul>
+				</div>
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="header_bottom">
+		<div class="menu">
+			<ul>
+				<li class="active"><a asp-action="Index" asp-controller="BaiThi">Nguyễn Thành Đạt</a></li>
+				@foreach(var item in Model)
+				{
+					<li id="@item.MaLoai" style=" cursor: pointer"><a>@item.TenLoai</a></li>
+				}
+				<li><a asp-action="Create" asp-controller="BaiThi">Thêm Mới</a></li>
+			</ul>
+		</div>
+		<div class="search_box">
+			<form>
+				<input type="text" id="keyword">
+				<input class="btn btn-primary" type="button" id="btnSearch">
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div style="float: right">
+		<label class="control-label">Filtering by Categories</label>
+		<select class="form-control" id="selectItem" asp-items="@ViewBag.listCate">
+			<option value="all">Tất cả</option>
+		</select>
+	</div>
+</div>

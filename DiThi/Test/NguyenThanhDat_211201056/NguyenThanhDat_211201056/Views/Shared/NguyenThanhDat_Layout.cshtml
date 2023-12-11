@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Ecommerce</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Samsung, LG, SonyEricsson, Motorola web design" />
+	<!--//tags -->
+	<link href="~/ThanhDat/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/ThanhDat/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/ThanhDat/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	<!-- header nav -->
+	<partial name="NguyenThanhDat_Header"/>
+	<!-- //header nav -->
+	<!-- main -->
+	<main id="main" class="ads-grid">
+		<div class="container">
+			<!-- main left -->
+			<partial name="NguyenThanhDat_MainLeft"/>
+			<!-- //main left -->
+			<!-- main right -->
+			@RenderBody()
+			<!-- //main right -->
+		</div>
+	</main>
+	<!-- //main -->
+	<!-- footer -->
+	<partial name="NguyenThanhDat_Footer"/>
+	<!-- //footer -->
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="~/ThanhDat/js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+	<!-- for bootstrap working -->
+	<script src="~/ThanhDat/js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@RenderSection("Scripts", required:false)

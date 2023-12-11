@@ -1,0 +1,35 @@
+﻿@model IEnumerable<OnThi.Models.Entities.HangHoa>
+<div class="content_table">
+    <div>
+        @foreach (var item in Model)
+        {
+            <div class="grid_1_of_4 images_1_of_4">
+                <a asp-action="Edit" asp-controller="BaiThi" asp-route-id="@item.MaHang"><img src="~/ThanhDat/images/@item.Anh" alt="" /></a>
+                <h2>@item.TenHang</h2>
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees">$@item.Gia</span></p>
+                    </div>
+                    <div class="add-cart">
+                        <h4><a asp-action="Delete" asp-controller="BaiThi" asp-route-id="@item.MaHang">Add to Cart</a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="clear"></div>
+    <div>
+        @*Thêm thanh nav-phân trang*@
+        <ul class="pagination">
+            @for (int i = 1; i <= ViewBag.pageNum; i++)
+            {
+                <li class="page-item" page="@i" style=" cursor: pointer"
+                @(ViewBag.mid != null ? $"mid = {ViewBag.mid}" : "")
+                @(ViewBag.keyword != null ? $"keyword = {ViewBag.keyword}" : "")>
+                    <a class="page-link">@i</a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

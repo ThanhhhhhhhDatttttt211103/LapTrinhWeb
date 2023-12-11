@@ -1,0 +1,54 @@
+﻿<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Shopping</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Super Market, Online Shopping" />
+
+	<!-- //for-mobile-apps -->
+	<link href="~/ThanhDat/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/ThanhDat/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="~/ThanhDat/css/jquery-ui-1.css">
+	<!-- font-awesome icons -->
+	<link href="~/ThanhDat/css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- js -->
+	<script src="~/ThanhDat/js/jquery-1.11.1.min.js"></script>
+	<!-- //js -->
+</head>
+
+<body>
+	<!-- header -->
+	<partial name="NguyenThanhDat_Header"/>
+	<!-- //header -->
+	<!-- main navigation -->
+	@await Component.InvokeAsync("NavItems")
+	<!-- //main navigation -->
+	<!--- main content --->
+	<div class="products">
+		<div class="container">
+			<!-- left categories -->
+			<partial name="NguyenThanhDat_LeftMenu"/>
+			<!-- /left categories -->
+			<!-- right products grid -->
+			@RenderBody()
+			<!-- right products grid -->
+		</div>
+	</div>
+	<!--- main content --->
+	<!-- footer -->
+	<partial name="NguyenThanhDat_Footer"/>
+	<!-- //footer -->
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@RenderSection("Scripts", required:false)
+

@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Ngay10_12_23_De210705
+build_property.RootNamespace = Ngay10_12_23_De210705
+build_property.ProjectDir = D:\Laptrinh\Web\OnTap\Ngay10_12_23_De210705\Ngay10_12_23_De210705\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Laptrinh\Web\OnTap\Ngay10_12_23_De210705\Ngay10_12_23_De210705
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/BaiThi/HangHoaTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVGhpXEhhbmdIb2FUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/BaiThi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVGhpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/Components/FilterCate/RenderCate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmlsdGVyQ2F0ZVxSZW5kZXJDYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/NguyenThanhDat_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5ndXllblRoYW5oRGF0X0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/NguyenThanhDat_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5ndXllblRoYW5oRGF0X0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/NguyenThanhDat_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5ndXllblRoYW5oRGF0X0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/NguyenThanhDat_TopNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5ndXllblRoYW5oRGF0X1RvcE5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laptrinh/Web/OnTap/Ngay10_12_23_De210705/Ngay10_12_23_De210705/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ap5in64pa5

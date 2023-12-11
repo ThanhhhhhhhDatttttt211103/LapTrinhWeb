@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<Ngay10_12_23_De210705.Models.Entities.Category>
+<div class="sorting-list">
+	<div class="sorting-left">
+		<select id="country1" onchange="" class="frm-field required sect selectItem">
+			<option><i class="fa fa-arrow-right" aria-hidden="true"></i>Tất cả</option>
+			@foreach(var item in Model)
+			{
+				<option value="@item.Id"><i class="fa fa-arrow-right" aria-hidden="true"></i>@item.NameVn</option>
+			}
+		</select>
+	</div>
+	<div class="sorting-text">Filtering By Categories</div>
+	<div class="clearfix"></div>
+</div>

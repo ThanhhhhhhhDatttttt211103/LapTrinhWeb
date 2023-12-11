@@ -1,0 +1,138 @@
+﻿@{
+	Layout = "~/Views/Shared/NguyenThanhDat_Layout.cshtml";
+}
+@model IEnumerable<OnThi.Models.Entities.HangHoa>
+<div class="main">
+	<div class="content">
+		<!-- Begin New Product -->
+		<div class="content_top">
+			<div class="heading">
+				<h3>New Products</h3>
+			</div>
+			<div class="see">
+				<p><a href="#">See all Products</a></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="section group">
+
+			<div class="content_table">
+				<div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a asp-action="Edit" asp-controller="BaiThi" asp-route-id="@item.MaHang"><img src="~/ThanhDat/images/@item.Anh" alt="" /></a>
+                            <h2>@item.TenHang</h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$@item.Gia</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><a asp-action="Delete" asp-controller="BaiThi" asp-route-id="@item.MaHang">Add to Cart</a></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    }
+				</div>
+				<div class="clear"></div>
+				<div>
+					@*Thêm thanh nav-phân trang*@
+					<ul class="pagination">
+						@for (int i = 1; i <= ViewBag.pageNum; i++)
+						{
+							<li class="page-item" page="@i" style=" cursor: pointer"
+							@(ViewBag.mid != null ? $"mid = {ViewBag.mid}" : "")
+							@(ViewBag.keyword != null ? $"keyword = {ViewBag.keyword}" : "")>
+								<a class="page-link">@i</a>
+							</li>
+						}
+					</ul>
+				</div>
+				
+			</div>			
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script>
+		$('body').on('click', 'li.page-item', function (e) {
+			var page = $(this).attr("page");
+			var mid = $(this).attr("mid");
+			var keyword = $(this).attr("keyword"); //
+			var data = { mid: mid, keyword: keyword, pageIndex: page };
+			$.ajax({
+				url: "/BaiThi/HangHoaFilter",
+				data: data,
+				success: function (response) {
+					$("div.content_table").html(response);
+				}
+			});
+		});
+
+		$(".menu li").click(function (e) {
+			var id = $(this).attr("id");
+			var data = { mid: id };
+			//alert(id)
+			$.ajax({
+				url: "/BaiThi/HangHoaFilter",
+				data: data,
+				success: function (response) {
+					$("div.content_table").html(response);
+				}
+			});
+		});
+
+		$("input#btnSearch").click(function (e) {
+			var keyword =$("#keyword").val();
+			var data = { keyword: keyword };
+			//alert(id)
+			$.ajax({
+				url: "/BaiThi/HangHoaFilter",
+				data: data,
+				success: function (response) {
+					$("div.content_table").html(response);
+				}
+			});
+		});
+
+	
+		// Xử lý sự kiện khi chọn phần tử trong dropdown list
+		$('#selectItem').on('change', function () {
+			var selectedCategory = $(this).val();
+			//alert(selectedCategory)
+			// Gửi yêu cầu AJAX để lấy nội dung mới
+			$.ajax({
+				url: "/BaiThi/HangHoaBySelect",
+				data: { mid: selectedCategory },
+				success: function (response) {
+					$("div.content_table").html(response);
+				}
+			});
+		});
+	</script>
+}
+
+<style>
+	.pagination-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.pagination {
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+		.pagination .page-item {
+			margin: 0 5px;
+		}
+
+		.pagination .page-link {
+			text-decoration: none;
+			color: blue;
+		}
+</style>
